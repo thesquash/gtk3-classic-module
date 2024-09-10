@@ -1,0 +1,16 @@
+/* TODO:  This is currently unused, but when alternating treeview row colours
+ * are restored, this will be the default CSS code to activate them if the
+ * current theme doesn't provide its own code for this.
+ */
+
+
+treeview:not(:selected).odd.sorted,
+treeview:not(:selected).even:not(.sorted)
+{
+	background:	alpha(black, 0.07);
+}
+
+treeview:not(:selected).even.sorted
+{
+	background:	alpha(black, 0.13);
+}

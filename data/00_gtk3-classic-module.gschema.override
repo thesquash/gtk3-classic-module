@@ -1,0 +1,23 @@
+# This file was installed by the gtk3-classic-module package.
+# Edit this file if you wish; however, you may want to instead use this file
+# as a template for a GSchema override file of your own.  Just ensure that
+# he name of your file begins with a two-digit number greater than the '00'
+# used by this override file, or otherwise your own settings may not take
+# precedence over the settings in this file.
+#
+# Please also see the file at:
+#
+#    /etc/gtk-3.0/settings.ini
+#
+# ...for additional settings.
+
+
+## Settings pertaining to the GTK file chooser dialog:
+
+[org.gtk.Settings.FileChooser]
+
+### Opens the file chooser dialog to the current directory (usually your home
+### directory) by default.  Change the 'cwd' to 'recent' if you prefer the
+### file chooser dialog to initially open up to the list of your recently
+### opened files.
+startup-mode = 'cwd'
