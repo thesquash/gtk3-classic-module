@@ -1,5 +1,5 @@
 project ('gtk3-classic-module', 'c',
-	version : '0.89',
+	version : '0.89.1',
 	default_options : [
 		'buildtype=release',
 		'optimization=2',
@@ -7,7 +7,7 @@ project ('gtk3-classic-module', 'c',
 		'strip=true',
 		'warning_level=3'
 	],
-	license: 'LGPLv3+')
+	license: 'LGPLv2')
 
 
 gtk_version_required = '>= 3.24.0'

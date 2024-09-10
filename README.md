@@ -145,5 +145,7 @@ here.
 
 ## License
 
-GNU LGPL-3 or later.  This is a newer version of the same license under which
-GTK 3 is released.
+GNU LGPL-2.  This is the same license under which GTK 3 is released.  (This
+module used to be LGPL-3 until I was warned that GTK 3 is licensed under LGPL-2
+[*only*](https://gitlab.gnome.org/GNOME/gtk/-/blob/main/COPYING).  I didn't
+know any project other than the Linux kernel was licensed that way.)
