@@ -112,6 +112,8 @@ amount of documentation about each option.
   the recursive search that GTK 3 normally performs.  Press
   <kbd>Alt</kbd>-<kbd>S</kbd> to launch the recursive search instead.
 
+  <img src='screenshots/file-chooser-typeahead.png'/>
+
 * The sizes of some widgets (mostly buttons) in the built-in GTK themes
   Adwaita and HighContrast have been reduced.
 
@@ -119,6 +121,17 @@ There may be other changes I have applied which I have forgotten to document
 here.
 
 ## To-Do
+
+* When the user scrolls over the tab bar of a GtkNotebook, switch the current
+  tab.
+
+  My experience with the patch from `gtk3-classic` is that some applications
+  (e.g. [Pluma](https://github.com/mate-desktop/pluma) implement this scrolling
+  behaviour themselves, and thus with the `gtk3-classic` patch applied,
+  scrolling will move over by *two* tab positions at a time.  My implementation
+  will record the current tab before passing control over to the default
+  handler of scroll events; only if the current tab hasn't changed after the
+  default handler runs, will the plugin switch tabs.
 
 * At least convert headerbars from a virtual titlebar for the window into a
   box at the top of the window content area.
