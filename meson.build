@@ -10,7 +10,9 @@ project ('gtk3-classic-module', 'c',
 	license: 'LGPLv2')
 
 
-gtk_version_required = '>= 3.24.0'
+# We require GTK+ 3.24.9 or later since that's the first version that has the
+# 'gtk-overlay-scrolling' setting.
+gtk_version_required = '>= 3.24.9'
 gtk_dep = dependency ('gtk+-3.0',
 	version: gtk_version_required)
 gtk_unix_print_dep = dependency ('gtk+-unix-print-3.0',
