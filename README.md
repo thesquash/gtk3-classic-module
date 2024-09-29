@@ -77,6 +77,16 @@ amount of documentation about each option.
 
   **Requires disabling the GTK setting `gtk-auto-mnemonics`.**
 
+* Displays tree views with alternating row colours ('zebra stripes') if the
+  tree view contains more than one column.
+
+  <img src='screenshots/zebra-stripes.png'/>
+
+  **Requires copying the contents of the file `data/zebra-stripes.css` into
+  your `~/.config/gtk-3.0/gtk.css` file; please see the file
+  `data/zebra-stripes.css` for more information, as there is a comment at the
+  top of that file with more things you may need to know.**
+
 * Forces GTK to display normal dialog buttons at the bottom of stock dialogs
   (e.g. About dialog, color chooser, file chooser), instead of displaying the
   buttons in a headerbar at the top of the dialog -- even on Wayland.
@@ -141,11 +151,6 @@ here.
 
 * Convert menu-like popovers into traditional menus.
 
-* Restore 'zebra stripes' (alternating row colours in treeviews).
-
 ## License
 
-GNU LGPL-2.  This is the same license under which GTK 3 is released.  (This
-module used to be LGPL-3 until I was warned that GTK 3 is licensed under LGPL-2
-[*only*](https://gitlab.gnome.org/GNOME/gtk/-/blob/main/COPYING).  I didn't
-know any project other than the Linux kernel was licensed that way.)
+GNU LGPL-2.  This is the same license under which GTK 3 is released.

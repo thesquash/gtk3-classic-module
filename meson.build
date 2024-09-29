@@ -56,7 +56,8 @@ shared_module ('gtk3-classic-module',
 		'patches/icon-sizes.c',
 		'patches/no-emojis.c',
 		'patches/persistent-mnemonics.c',
-		'patches/smaller-widgets.c'
+		'patches/smaller-widgets.c',
+		'patches/treeview-zebra-stripes.c'
 	],
 	include_directories: [ include_dir ],
 	dependencies: [ gtk_dep, gtk_unix_print_dep ],

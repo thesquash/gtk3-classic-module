@@ -1,16 +1,31 @@
-/* TODO:  This is currently unused, but when alternating treeview row colours
- * are restored, this will be the default CSS code to activate them if the
- * current theme doesn't provide its own code for this.
+/* This file enables alternating light and dark row colours ('zebra stripes')
+ * in tree view widgets.  These are general good default colours for light
+ * themes.  You can enable zebra stripes by copying this file to your
+ * ~/.config/gtk-3.0/gtk.css file, or you can implement similar code in your
+ * theme CSS.
+ *
+ * Note the extra CSS selectors which theme only tree views with more than
+ * one column; generally speaking, zebra stripes are only necessary when the
+ * list or tree contains more than one column.  If you really want zebra
+ * stripes on all tree views, regardless of column count, remove the extra
+ * selectors for ':not(.first):not(.last)', '.first:not(.last)', and
+ * ':not(.first).last'.
  */
 
 
-treeview:not(:selected).odd.sorted,
-treeview:not(:selected).even:not(.sorted)
+treeview.cell:not(.first):not(.last):not(:selected).odd.sorted,
+treeview.cell.first:not(.last):not(:selected).odd.sorted,
+treeview.cell:not(.first).last:not(:selected).odd.sorted,
+treeview.cell:not(.first):not(.last):not(:selected).even:not(.sorted),
+treeview.cell.first:not(.last):not(:selected).even:not(.sorted),
+treeview.cell:not(.first).last:not(:selected).even:not(.sorted)
 {
 	background:	alpha(black, 0.07);
 }
 
-treeview:not(:selected).even.sorted
+treeview.cell:not(.first):not(.last):not(:selected).even.sorted,
+treeview.cell.first:not(.last):not(:selected).even.sorted,
+treeview.cell:not(.first).last:not(:selected).even.sorted
 {
 	background:	alpha(black, 0.13);
 }

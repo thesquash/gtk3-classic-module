@@ -14,9 +14,11 @@ void	icon_sizes_init ();
 void	no_emojis_init ();
 void	persistent_mnemonics_init ();
 void	smaller_widgets_init ();
+void	treeview_zebra_stripes_init ();
 
 static const InitFunc	init_funcs[] =
 {
+	treeview_zebra_stripes_init,
 	smaller_widgets_init,
 	/* No Emojis must be loaded before Button/Menu Icons since the former
 	 * overrides GtkMenuItem, the superclass of the GtkImageMenuItem class
