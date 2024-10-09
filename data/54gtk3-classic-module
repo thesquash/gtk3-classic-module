@@ -1,0 +1,9 @@
+# File: /etc/X11/Xsession.d/54gtk3-classic-module
+# Placed by package gtk3-classic-module
+_add="gtk3-classic-module"
+if [ -z "$GTK_MODULES" ] ; then
+    GTK_MODULES="${_add}"
+else
+    GTK_MODULES="$GTK_MODULES:${_add}"
+fi
+export GTK_MODULES
