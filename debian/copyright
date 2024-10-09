@@ -1,0 +1,47 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: gtk3-classic-module
+Upstream-Contact: <preferred name and address to reach the upstream project>
+Source: <url://example.com>
+#
+# Please double check copyright with the licensecheck(1) command.
+
+Files:     .gitignore
+           README.md
+           data/00_gtk3-classic-module.gschema.override
+           data/settings.ini
+           data/zebra-stripes.css
+           include/gtk3-classic.h
+           main.c
+           meson.build
+           patches/button-menu-icons.c
+           patches/dialogs.c
+           patches/icon-sizes.c
+           patches/no-emojis.c
+           patches/persistent-mnemonics.c
+           patches/smaller-widgets.c
+           patches/treeview-zebra-stripes.c
+           screenshots/button-icons.png
+           screenshots/dialog-with-classic-buttons.png
+           screenshots/file-chooser-typeahead.png
+           screenshots/menu-icons.png
+           screenshots/message-dialog.png
+           screenshots/persistent-mnemonics.png
+           screenshots/zebra-stripes.png
+Copyright: Copyright (C) Gord N. Squash <gordsqsh@protonmail.com>
+License:   LGPL-2+
+ This library is free software; you can redistribute it and/or modify it
+ under the terms of the GNU Lesser General Public License as published by the
+ Free Software Foundation; either version 2 of the License, or (at your
+ option) any later version.
+ .
+ This library is distributed in the hope that it will be useful, but WITHOUT
+ ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+ FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public License
+ for more details. 
+ .
+ You should have received a copy of the GNU Lesser General Public
+ License along with this library; if not, write to the
+ Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ 02110-1301  USA.
+ .
+ See /usr/share/common-licenses/LGPL-2 on your debian system.
