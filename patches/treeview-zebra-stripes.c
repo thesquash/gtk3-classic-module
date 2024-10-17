@@ -81,6 +81,9 @@ new_gtk_cell_area_render
 		bin_x = cell_area->x + cell_area->width - 1;
 		bin_y = cell_area->y + cell_area->height - 1;
 
+		if (gtk_tree_view_get_headers_visible (treeview))
+			gtk_style_context_add_class (style, "has-header");
+
 		gtk_tree_view_get_path_at_pos (treeview, bin_x, bin_y,
 					       &path, &column, NULL, NULL);
 		if (path != NULL)

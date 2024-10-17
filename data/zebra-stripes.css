@@ -10,22 +10,26 @@
  * stripes on all tree views, regardless of column count, remove the extra
  * selectors for ':not(.first):not(.last)', '.first:not(.last)', and
  * ':not(.first).last'.
+ *
+ * Also, this CSS will apply zebra stripes to tree view widgets which have
+ * visible column headers.  If you want all tree views to be considered for
+ * zebra striping, remove the '.has-header' from each line.
  */
 
 
-treeview.cell:not(.first):not(.last):not(:selected).odd.sorted,
-treeview.cell.first:not(.last):not(:selected).odd.sorted,
-treeview.cell:not(.first).last:not(:selected).odd.sorted,
-treeview.cell:not(.first):not(.last):not(:selected).even:not(.sorted),
-treeview.cell.first:not(.last):not(:selected).even:not(.sorted),
-treeview.cell:not(.first).last:not(:selected).even:not(.sorted)
+treeview.has-header.cell:not(.first):not(.last):not(:selected).odd.sorted,
+treeview.has-header.cell.first:not(.last):not(:selected).odd.sorted,
+treeview.has-header.cell:not(.first).last:not(:selected).odd.sorted,
+treeview.has-header.cell:not(.first):not(.last):not(:selected).even:not(.sorted),
+treeview.has-header.cell.first:not(.last):not(:selected).even:not(.sorted),
+treeview.has-header.cell:not(.first).last:not(:selected).even:not(.sorted)
 {
 	background:	alpha(black, 0.07);
 }
 
-treeview.cell:not(.first):not(.last):not(:selected).even.sorted,
-treeview.cell.first:not(.last):not(:selected).even.sorted,
-treeview.cell:not(.first).last:not(:selected).even.sorted
+treeview.has-header.cell:not(.first):not(.last):not(:selected).even.sorted,
+treeview.has-header.cell.first:not(.last):not(:selected).even.sorted,
+treeview.has-header.cell:not(.first).last:not(:selected).even.sorted
 {
 	background:	alpha(black, 0.13);
 }
